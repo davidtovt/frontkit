@@ -1,0 +1,43 @@
+@mixin font-face($family, $filename, $path, $weight, $style: 'normal') {
+    @font-face {
+        font-family: '#{$family}';
+        src: url('#{$path}/#{$filename}.eot');
+        src: url('#{$path}/#{$filename}.eot?#iefix') format('embedded-opentype'),
+            url('#{$path}/#{$filename}.woff2') format('woff2'),
+            url('#{$path}/#{$filename}.woff') format('woff'),
+            url('#{$path}/#{$filename}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@mixin responsive-img($ratio: 50%) {
+    background-position: center center;
+    background-size: cover;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-bottom: $ratio;
+    }
+
+    img {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+}
+
+@mixin transparent-color($color) {
+    background: $color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin no-last-margin() {
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}

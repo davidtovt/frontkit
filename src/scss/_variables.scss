@@ -1,0 +1,129 @@
+/*************************************************
+    Custom Variables
+**************************************************/
+
+$animation-time:                                  .4s;
+$animation-type:                                  ease-in-out;
+$animation-default:                               all $animation-time $animation-type;
+
+$mb-default:                                      1.5rem;
+
+$header-height:                                   56px;
+$header-height-desktop:                           83px;
+
+/*************************************************
+    Bootstrap Variables
+**************************************************/
+
+// Spacing
+
+$spacer: .25rem;
+
+$spacers: (
+    0: 0,
+    1: $spacer,
+    2: $spacer * 2,
+    3: $spacer * 3,
+    4: $spacer * 4,
+    5: $spacer * 5,
+    6: $spacer * 6,
+    7: $spacer * 7,
+    8: $spacer * 8,
+    9: $spacer * 9,
+    10: $spacer * 10
+);
+
+// Grid
+
+$grid-gutter-width: 1.875rem;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1260px,
+    xxl: 1360px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1200px,
+    xxl: 1320px
+);
+
+// Colors
+
+$primary:                                         #C4A37B;
+$secondary:                                       #000;
+$light:                                           #fff;
+$dark:                                            $secondary;
+$body-bg:                                         $light;
+$body-color:                                      #5A5A5A;
+
+// Spaces
+
+$paragraph-margin-bottom:                         $mb-default;
+$headings-margin-bottom:                          $paragraph-margin-bottom;
+
+// Links
+
+$link-decoration:                                 none;
+$link-hover-color:                                $secondary;
+$link-hover-decoration:                           none;
+
+// Components
+
+$border-radius:                                   0;
+$border-radius-sm:                                $border-radius;
+$border-radius-lg:                                $border-radius;
+
+$box-shadow:                                      none;
+$box-shadow-sm:                                   $box-shadow;
+$box-shadow-lg:                                   $box-shadow;
+
+// Typography
+
+$font-family-base:                                Montserrat, Arial, sans-serif;
+
+$font-size-base:                                  1rem;
+$font-size-lg:                                    1.125rem;
+$font-size-sm:                                    .875rem;
+
+$line-height-base:                                1.75;
+
+$font-weight-lighter:                             200;
+$font-weight-light:                               300;
+$font-weight-normal:                              400;
+$font-weight-bold:                                600;
+$font-weight-bolder:                              700;
+
+$headings-font-family:                            $font-family-base;
+$headings-font-weight:                            $font-weight-bolder;
+$headings-line-height:                            1.25;
+
+// Buttons
+
+$btn-font-size:                                   1.125rem;
+$btn-font-size-sm:                                1rem;
+$btn-padding-x:                                   1.75rem;
+$btn-padding-y:                                   .78125rem; 
+$btn-padding-x-sm:                                1.25rem;
+$btn-padding-y-sm:                                .4375rem; 
+$btn-transition:                                  color $animation-time, background-color $animation-time $animation-type, border-color $animation-time $animation-type, box-shadow $animation-time $animation-type;
+
+// Forms
+
+$input-font-size:                                 .875rem;
+$input-line-height:                               1.5;
+$input-padding-x:                                 1rem;
+$input-padding-y:                                 .53125rem;
+$input-color:                                     $body-color;
+$input-border-width:                              1px;
+$input-box-shadow:                                none;
+$input-border-color:                              #DBDBDB;
+$input-focus-border-color:                        darken($input-border-color, 20);
+$input-focus-box-shadow:                          none;
+$input-placeholder-color:                         #AEAEAE;
