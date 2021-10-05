@@ -1,0 +1,96 @@
+{{#extend "layout"}}
+    {{#content "title"}}Accordions{{/content}}
+
+    {{#content "content"}}
+
+        <article class="kit-article">
+            <h2>Default Accordion</h2>
+            
+            <div class="kit-example">
+                <div class="accordion accordion-flush" id="accordion-1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="accordion-1-heading-1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1-item-1" aria-expanded="true" aria-controls="accordion-1-item-1">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="accordion-1-item-1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum<br /> dolor sit<br /> amet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="accordion-1-heading-2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1-item-2" aria-expanded="false" aria-controls="accordion-1-item-2">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="accordion-1-item-2" class="accordion-collapse collapse" aria-labelledby="accordion-1-heading-2" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum<br /> dolor sit<br /> amet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kit-source">
+                <ul class="nav" id="pills-tab" role="tablist">
+                    <li class="me-6" role="presentation">
+                        <a href="#pills-accordion-1-html" class="active" id="pills-accordion-1-html-tab" data-bs-toggle="pill" role="tab" aria-controls="pills-accordion-1-html" aria-selected="true">
+                            HTML
+                        </a>
+                    </li>
+                    <li class="me-6" role="presentation">
+                        <a href="#pills-accordion-1-scss" id="pills-accordion-1-scss-tab" data-bs-toggle="pill" role="tab" aria-controls="pills-accordion-1-scss" aria-selected="false">
+                            SCSS
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-accordion-1-html" role="tabpanel" aria-labelledby="pills-accordion-1-html-tab">
+<pre><code class="language-html"><div class="accordion accordion-flush" id="accordion-1">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="accordion-1-heading-1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1-item-1" aria-expanded="true" aria-controls="accordion-1-item-1">
+                Accordion Item #1
+            </button>
+        </h2>
+        <div id="accordion-1-item-1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion-1">
+            <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="accordion-1-heading-2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1-item-2" aria-expanded="false" aria-controls="accordion-1-item-2">
+                Accordion Item #2
+            </button>
+        </h2>
+        <div id="accordion-1-item-2" class="accordion-collapse collapse" aria-labelledby="accordion-1-heading-2" data-bs-parent="#accordion-1">
+            <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+</div>
+</code></pre>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-accordion-1-scss" role="tabpanel" aria-labelledby="pills-accordion-1-scss-tab">
+<pre><code class="language-scss">.accordion {
+    &-body {
+        @include no-last-margin();
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    {{/content}}
+{{/extend}}

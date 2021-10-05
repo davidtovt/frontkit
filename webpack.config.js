@@ -1,5 +1,7 @@
+const fs = require('fs');
 const CopyPlugin = require('copy-webpack-plugin');
 const HandlebarsPlugin = require('handlebars-webpack-plugin');
+const HandlebarsLayouts = require('handlebars-layouts');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
@@ -26,7 +28,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     libs: [paths.src.scss + '/libs.scss'],
-    theme: [paths.src.js + '/theme.js', paths.src.scss + '/theme.scss'],
+    app: [paths.src.js + '/app.js', paths.src.scss + '/app.scss'],
   },
   mode: 'development',
   module: {
@@ -98,9 +100,9 @@ module.exports = {
       ],
     }),
     new HandlebarsPlugin({
-      entry: path.join(process.cwd(), 'src', 'html', '**', '*.html'),
+      entry: path.join(process.cwd(), 'src', 'html', '**', '*.{html,hbs}'),
       output: path.join(process.cwd(), 'dist', '[name].html'),
-      partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,svg}')],
+      partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,svg,hbs}')],
       helpers: {
         is: function (v1, v2, options) {
           const variants = v2.split(' || ');
@@ -114,6 +116,10 @@ module.exports = {
         webRoot: function () {
           return '.';
         },
+      },
+      onBeforeSetup: function(Handlebars){
+        Handlebars.registerHelper(HandlebarsLayouts(Handlebars));
+        Handlebars.registerPartial('layout', fs.readFileSync('src/partials/layout.hbs', 'utf8'));
       },
       onBeforeSave: function (Handlebars, resultHtml, filename) {
         const level = filename.split('//').pop().split('/').length;

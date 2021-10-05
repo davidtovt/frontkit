@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Libs CSS -->
+        <link rel="stylesheet" href="{{webRoot}}/assets/css/libs.bundle.css" />
+
+        <!-- App CSS -->
+        <link rel="stylesheet" href="{{webRoot}}/assets/css/app.bundle.css" />
+
+        <!-- Title -->
+        <title>{{#block "title"}}{{/block}} - FrontKit</title>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{webRoot}}/assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{webRoot}}/assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{webRoot}}/assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="{{webRoot}}/assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="{{webRoot}}/assets/favicon/safari-pinned-tab.svg" color="#C4A37B" />
+        <meta name="msapplication-TileColor" content="#C4A37B" />
+        <meta name="theme-color" content="#C4A37B" />
+    </head>
+    <body>
+
+        <main class="kit-main">
+
+            {{> partials/sidebar }}
+
+            <section class="kit-content">
+                <h1 class="kit-headline">
+                    <div class="container">
+                        {{#block "title"}}{{/block}}
+                    </div>
+                </h1>
+
+                <div class="container">
+                    {{#block "content"}}{{/block}}
+                </div>
+            </section>
+        </main>
+
+        <!-- Vendor JS -->
+        <script src="{{webRoot}}/assets/js/vendor.bundle.js"></script>
+
+        <!-- App JS -->
+        <script src="{{webRoot}}/assets/js/app.bundle.js"></script>
+    </body>
+</html>

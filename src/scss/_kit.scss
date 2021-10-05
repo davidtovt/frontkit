@@ -1,0 +1,141 @@
+body {
+    background: $gray-100;
+}
+
+.kit {
+    &-main {
+        display: flex;
+    }
+
+    &-sidebar {
+        position: sticky;
+        overflow: auto;
+        top: 0;
+        height: 100vh;
+        width: 300px;
+        min-width: 300px;
+        font-size: $font-size-sm;
+        background-color: $white;
+        box-shadow: 0 0 1rem transparentize($dark, .95);
+
+        @include scrollbar($gray-200, $gray-500);
+
+        &__title {
+            margin: 0;
+            font-size: 1.5rem;
+            padding: 1.25rem 1.5rem;
+            color: $light;
+            background-color: $primary;
+        }
+
+        &__body {
+            padding: 1.25rem 1.5rem;
+        
+            ul {
+                padding: 0;
+                list-style-type: none;
+
+                li {
+                    .btn,
+                    a {
+                        display: block;
+                        padding: .5rem 1.5rem;
+                    }
+
+                    .btn {
+                        width: 100%;
+                        font-size: $font-size-sm;
+                        text-align: left;
+                        color: transparentize($primary, .2);
+                        background-color: transparentize($primary, .95);
+
+                        &:hover,
+                        &[aria-expanded="true"] {
+                            color: $primary;
+                            background-color: transparentize($primary, .8);
+                        }
+                    }
+
+                    a {
+                        color: $gray-900;
+                        border-radius: $border-radius;
+                        transition: $transition-base;
+                    }
+
+                    &:hover,
+                    &.active {
+                        > a {
+                            color: $white;
+                            background-color: $primary;
+                        }
+                    }
+                }
+            }
+
+            > ul {
+                > li {
+                    margin-bottom: 1.25rem;
+
+                    li {
+                        margin-top: .25rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &-headline {
+        margin: -2rem -2rem 3rem;
+        font-size: 1.5rem;
+        padding: 1.25rem 1.5rem;
+        color: $white;
+        background-color: transparentize($dark, .1);
+    }
+
+    &-content {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    &-article {
+        margin-bottom: 3rem;
+    }
+
+    &-example {
+        padding: 1.5rem;
+        border: 1px solid $gray-200;
+        background-color: $white;
+
+        @include no-last-margin();
+    }
+
+    &-source {
+        background-color: $dark;
+
+        .nav {
+            padding: 1rem 1.5rem;
+
+            a {
+                color: $gray-500;
+                transition: $transition-base;
+
+                &:hover,
+                &.active {
+                    color: $white;
+                }
+            }
+        }
+
+        .tab-pane {
+            pre {
+                overflow: auto;
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}
+
+pre code.hljs {
+    padding: 1rem 1.5rem;
+}

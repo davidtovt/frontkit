@@ -41,3 +41,24 @@
         margin-bottom: 0;
     }
 }
+
+@mixin scrollbar($bg, $thumb) {
+    scrollbar-width: thin;
+	scrollbar-color: $thumb $bg;
+
+	&::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $bg;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-width: 2px;
+		border-style: solid;
+		border-color: $bg;
+		background-color: $thumb;
+		border-radius: 12px;
+	}
+}

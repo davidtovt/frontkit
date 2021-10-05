@@ -1,0 +1,54 @@
+{{#extend "layout"}}
+    {{#content "title"}}Carousels{{/content}}
+
+    {{#content "content"}}
+        <article class="kit-article">
+            <h2>Responsive Carousel</h2>
+            
+            <div class="kit-example">
+                <div class="swiper responsive-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            
+            <div class="kit-source">
+                <ul class="nav" id="pills-tab" role="tablist">
+                    <li class="me-6" role="presentation">
+                        <a href="#pills-carousel-1-html" class="active" id="pills-carousel-1-html-tab" data-bs-toggle="pill" role="tab" aria-controls="pills-carousel-1-html" aria-selected="true">
+                            HTML
+                        </a>
+                    </li>
+                    <li class="me-6" role="presentation">
+                        <a href="#pills-carousel-1-scss" id="pills-carousel-1-scss-tab" data-bs-toggle="pill" role="tab" aria-controls="pills-carousel-1-scss" aria-selected="false">
+                            SCSS
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-carousel-1-html" role="tabpanel" aria-labelledby="pills-carousel-1-html-tab">
+<pre><code class="language-html">
+</code></pre>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-carousel-1-scss" role="tabpanel" aria-labelledby="pills-carousel-1-scss-tab">
+<pre><code class="language-scss">
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,102 @@
+{{#extend "layout"}}
+    {{#content "title"}}Form Components{{/content}}
+
+    {{#content "content"}}
+        <article class="kit-article">
+            <h2>Default Form Control</h2>
+            
+            <div class="kit-example">
+                <label>Label</label>
+
+                <input type="text" class="form-control" placeholder="Input" />
+            </div>
+            
+            <div class="kit-source">
+                <ul class="nav" id="pills-tab" role="tablist">
+                    <li class="me-6" role="presentation">
+                        <a href="#pills-input-1-html" class="active" id="pills-input-1-html-tab" data-bs-toggle="pill" role="tab" aria-controls="pills-input-1-html" aria-selected="true">
+                            HTML
+                        </a>
+                    </li>
+                    <li class="me-6" role="presentation">
+                        <a href="#pills-input-1-scss" id="pills-input-1-scss-tab" data-bs-toggle="pill" role="tab" aria-controls="pills-input-1-scss" aria-selected="false">
+                            SCSS
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-input-1-html" role="tabpanel" aria-labelledby="pills-input-1-html-tab">
+<pre><code class="language-html"><input type="text" class="form-control" placeholder="Input" />
+</code></pre>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-input-1-scss" role="tabpanel" aria-labelledby="pills-input-1-scss-tab">
+<pre><code class="language-scss">
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="kit-article">
+            <h2>Default Check & Radio</h2>
+            
+            <div class="kit-example">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Default radio
+                    </label>
+                </div>
+            </div>
+            
+            <div class="kit-source">
+                <ul class="nav" id="pills-tab" role="tablist">
+                    <li class="me-6" role="presentation">
+                        <a href="#pills-input-1-html" class="active" id="pills-input-1-html-tab" data-bs-toggle="pill" role="tab" aria-controls="pills-input-1-html" aria-selected="true">
+                            HTML
+                        </a>
+                    </li>
+                    <li class="me-6" role="presentation">
+                        <a href="#pills-input-1-scss" id="pills-input-1-scss-tab" data-bs-toggle="pill" role="tab" aria-controls="pills-input-1-scss" aria-selected="false">
+                            SCSS
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-input-1-html" role="tabpanel" aria-labelledby="pills-input-1-html-tab">
+<pre><code class="language-html"><div class="form-check">
+    <input class="form-check-input" type="checkbox" id="flexCheckDefault" />
+    <label class="form-check-label" for="flexCheckDefault">
+        Default checkbox
+    </label>
+</div>
+
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+    <label class="form-check-label" for="flexRadioDefault1">
+        Default radio
+    </label>
+</div>
+</code></pre>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-input-1-scss" role="tabpanel" aria-labelledby="pills-input-1-scss-tab">
+<pre><code class="language-scss">
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    {{/content}}
+{{/extend}}

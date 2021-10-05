@@ -1,12 +1,7 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        {{> partials/head title="FrontKit" }}
-    </head>
-    <body>
+{{#extend "layout"}}
+    {{#content "title"}}Home{{/content}}
 
-        <!-- JavaScript -->
-        {{> partials/scripts }}
-        
-    </body>
-</html>
+    {{#content "content"}}
+
+    {{/content}}
+{{/extend}}

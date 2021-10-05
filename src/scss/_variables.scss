@@ -2,35 +2,48 @@
     Custom Variables
 **************************************************/
 
-$animation-time:                                  .4s;
-$animation-type:                                  ease-in-out;
-$animation-default:                               all $animation-time $animation-type;
+$transition-time:                .4s;
+$transition-type:                ease-in-out;
 
-$mb-default:                                      1.5rem;
+$mb-default:                     1.5rem;
 
-$header-height:                                   56px;
-$header-height-desktop:                           83px;
+$header-height:                  56px;
+$header-height-desktop:          83px;
 
 /*************************************************
     Bootstrap Variables
 **************************************************/
 
+// Options
+
+$enable-negative-margins:        true;
+
 // Spacing
 
-$spacer: .25rem;
+$spacer: 1rem;
 
 $spacers: (
-    0: 0,
-    1: $spacer,
-    2: $spacer * 2,
-    3: $spacer * 3,
-    4: $spacer * 4,
-    5: $spacer * 5,
-    6: $spacer * 6,
-    7: $spacer * 7,
-    8: $spacer * 8,
-    9: $spacer * 9,
-    10: $spacer * 10
+    0:  0,
+    1:  .25rem,
+    2:  .25rem * 2,
+    3:  .25rem * 3,
+    4:  .25rem * 4,
+    5:  .25rem * 5,
+    6:  .25rem * 6,
+    7:  .25rem * 7,
+    8:  .25rem * 8,
+    9:  .25rem * 9,
+    10: .25rem * 10,
+    11: .25rem * 11,
+    12: .25rem * 12,
+    13: .25rem * 13,
+    14: .25rem * 14,
+    15: .25rem * 15,
+    16: .25rem * 16,
+    17: .25rem * 17,
+    18: .25rem * 18,
+    19: .25rem * 19,
+    20: .25rem * 20
 );
 
 // Grid
@@ -42,88 +55,125 @@ $grid-breakpoints: (
     sm: 576px,
     md: 768px,
     lg: 992px,
-    xl: 1260px,
-    xxl: 1360px
+    xl: 1200px,
+    xxl: 1400px
 );
 
 $container-max-widths: (
     sm: 540px,
     md: 720px,
     lg: 960px,
-    xl: 1200px,
+    xl: 1140px,
     xxl: 1320px
 );
 
 // Colors
 
-$primary:                                         #C4A37B;
-$secondary:                                       #000;
-$light:                                           #fff;
-$dark:                                            $secondary;
-$body-bg:                                         $light;
-$body-color:                                      #5A5A5A;
+$white:         #fff;
+$gray-100:      #fafbfc;
+$gray-200:      #e9ecef;
+$gray-300:      #dee2e6;
+$gray-400:      #ced4da;
+$gray-500:      #adb5bd;
+$gray-600:      #6c757d;
+$gray-700:      #495057;
+$gray-800:      #343a40;
+$gray-900:      #212529;
+$black:         #000;
+
+$blue:          #0d6efd;
+$indigo:        #6610f2;
+$purple:        #6c38e9;
+$pink:          #d63384;
+$red:           #dc3545;
+$orange:        #fd7e14;
+$yellow:        #ffc107;
+$green:         #198754;
+$teal:          #20c997;
+$cyan:          #0dcaf0;
+
+$primary:       #4347d1;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-900;
+
+$body-bg:       $white;
+$body-color:    $gray-900;
+
+// Transition
+
+$transition-base:               all $transition-time $transition-type;
 
 // Spaces
 
-$paragraph-margin-bottom:                         $mb-default;
-$headings-margin-bottom:                          $paragraph-margin-bottom;
+$paragraph-margin-bottom:       $mb-default;
+$headings-margin-bottom:        $paragraph-margin-bottom;
 
 // Links
 
-$link-decoration:                                 none;
-$link-hover-color:                                $secondary;
-$link-hover-decoration:                           none;
+$link-color:                    $primary;
+$link-decoration:               none;
+$link-hover-color:              $secondary;
+$link-hover-decoration:         none;
 
 // Components
 
-$border-radius:                                   0;
-$border-radius-sm:                                $border-radius;
-$border-radius-lg:                                $border-radius;
+$border-radius:                 .5rem;
+$border-radius-sm:              .125rem;
+$border-radius-lg:              1rem;
 
-$box-shadow:                                      none;
-$box-shadow-sm:                                   $box-shadow;
-$box-shadow-lg:                                   $box-shadow;
+$box-shadow:                    none;
+$box-shadow-sm:                 $box-shadow;
+$box-shadow-lg:                 $box-shadow;
 
 // Typography
 
-$font-family-base:                                Montserrat, Arial, sans-serif;
+$font-family-base:              Poppins, Arial, sans-serif;
 
-$font-size-base:                                  1rem;
-$font-size-lg:                                    1.125rem;
-$font-size-sm:                                    .875rem;
+$font-size-base:                1rem;
+$font-size-lg:                  1.125rem;
+$font-size-sm:                  .875rem;
 
-$line-height-base:                                1.75;
+$line-height-base:              1.75;
 
-$font-weight-lighter:                             200;
-$font-weight-light:                               300;
-$font-weight-normal:                              400;
-$font-weight-bold:                                600;
-$font-weight-bolder:                              700;
+$font-weight-lighter:           200;
+$font-weight-light:             300;
+$font-weight-normal:            400;
+$font-weight-bold:              500;
+$font-weight-bolder:            700;
 
-$headings-font-family:                            $font-family-base;
-$headings-font-weight:                            $font-weight-bolder;
-$headings-line-height:                            1.25;
+$headings-font-family:          Poppins, Arial, sans-serif;
+$headings-font-weight:          $font-weight-bolder;
+$headings-line-height:          1.25;
 
 // Buttons
 
-$btn-font-size:                                   1.125rem;
-$btn-font-size-sm:                                1rem;
-$btn-padding-x:                                   1.75rem;
-$btn-padding-y:                                   .78125rem; 
-$btn-padding-x-sm:                                1.25rem;
-$btn-padding-y-sm:                                .4375rem; 
-$btn-transition:                                  color $animation-time, background-color $animation-time $animation-type, border-color $animation-time $animation-type, box-shadow $animation-time $animation-type;
+$btn-font-size:                 1rem;
+$btn-font-size-sm:              .875rem;
+$btn-font-size-lg:              1.125rem;
+$btn-padding-x:                 1.75rem;
+$btn-padding-y:                 .75rem; 
+$btn-padding-x-sm:              1.25rem;
+$btn-padding-y-sm:              .5rem; 
+$btn-padding-x-lg:              1.25rem;
+$btn-padding-y-lg:              1rem;
+$btn-transition:                color $transition-time $transition-type, background-color $transition-time $transition-type, border-color $transition-time $transition-type, box-shadow $transition-time $transition-type;
 
 // Forms
 
-$input-font-size:                                 .875rem;
-$input-line-height:                               1.5;
-$input-padding-x:                                 1rem;
-$input-padding-y:                                 .53125rem;
-$input-color:                                     $body-color;
-$input-border-width:                              1px;
-$input-box-shadow:                                none;
-$input-border-color:                              #DBDBDB;
-$input-focus-border-color:                        darken($input-border-color, 20);
-$input-focus-box-shadow:                          none;
-$input-placeholder-color:                         #AEAEAE;
+$input-font-size:               .875rem;
+$input-line-height:             1.5;
+$input-padding-x:               1rem;
+$input-padding-y:               .53125rem;
+$input-color:                   $body-color;
+$input-border-width:            1px;
+$input-box-shadow:              none;
+$input-border-color:            #DBDBDB;
+$input-focus-border-color:      darken($input-border-color, 20);
+$input-focus-box-shadow:        none;
+$input-placeholder-color:       #AEAEAE;
+$input-btn-focus-width:         2px;

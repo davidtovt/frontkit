@@ -1,0 +1,55 @@
+{{#extend "layout"}}
+    {{#content "title"}}Cards{{/content}}
+
+    {{#content "content"}}
+        <article class="kit-article">
+            <h2>Default Card</h2>
+            
+            <div class="kit-example">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://dummyimage.com/286x200/868e96/fff" class="card-img-top" alt="" />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kit-source">
+                <ul class="nav" id="pills-tab" role="tablist">
+                    <li class="me-6" role="presentation">
+                        <a href="#pills-card-1-html" class="active" id="pills-card-1-html-tab" data-bs-toggle="pill" role="tab" aria-controls="pills-card-1-html" aria-selected="true">
+                            HTML
+                        </a>
+                    </li>
+                    <li class="me-6" role="presentation">
+                        <a href="#pills-card-1-scss" id="pills-card-1-scss-tab" data-bs-toggle="pill" role="tab" aria-controls="pills-card-1-scss" aria-selected="false">
+                            SCSS
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-card-1-html" role="tabpanel" aria-labelledby="pills-card-1-html-tab">
+<pre><code class="language-html"><div class="card">
+    <img src="https://dummyimage.com/286x200/868e96/fff" class="card-img-top" alt="" />
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+</code></pre>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-card-1-scss" role="tabpanel" aria-labelledby="pills-card-1-scss-tab">
+<pre><code class="language-scss">
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    {{/content}}
+{{/extend}}
